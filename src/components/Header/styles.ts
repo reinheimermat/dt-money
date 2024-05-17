@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const HeaderContainer = styled.div`
   background: ${(props) => props.theme['gray-900']};
   padding: 2.5rem 0 7.5rem;
+  width: 100%;
 `
 
 export const HeaderContent = styled.div`

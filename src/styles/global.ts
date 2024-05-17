@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    html {
+        font-size: 10px;
+    }
+
     :focus {
         outline: none;
         box-shadow: 0 0 0 2px ${(props) => props.theme['green-500']};
@@ -21,5 +25,11 @@ export const GlobalStyle = createGlobalStyle`
     body, input, textarea, button {
         font: 400 1rem Roboto, sans-serif;
     }
+
+    @media (min-width: 992px) {
+        html {
+            font-size: 16px;
+        }
+    } 
 
 `
