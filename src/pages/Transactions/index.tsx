@@ -2,6 +2,9 @@ import { Header } from '../../components/Header'
 import { SearchForm } from '../../components/SearchForm'
 import { Summary } from '../../components/Summary'
 import {
+  ArrowButton,
+  PageButton,
+  Pagination,
   PriceHighlight,
   TransactionsContainer,
   TransactionsTable,
@@ -9,6 +12,7 @@ import {
 import { TransactionContext } from '../../contexts/TransactionContext'
 import { dateFormatter, priceFormatter } from '../../utils/formatter'
 import { useContextSelector } from 'use-context-selector'
+import { CaretLeft, CaretRight } from 'phosphor-react'
 
 export function Transactions() {
   const transactions = useContextSelector(TransactionContext, (ctx) => {
@@ -44,6 +48,18 @@ export function Transactions() {
             })}
           </tbody>
         </TransactionsTable>
+
+        <Pagination>
+          <ArrowButton>
+            <CaretLeft size={16} weight="bold" />
+          </ArrowButton>
+          <PageButton isSelect={true}>1</PageButton>
+          <PageButton>2</PageButton>
+          <PageButton>3</PageButton>
+          <ArrowButton isTherePage={true}>
+            <CaretRight size={16} weight="bold" />
+          </ArrowButton>
+        </Pagination>
       </TransactionsContainer>
     </div>
   )
