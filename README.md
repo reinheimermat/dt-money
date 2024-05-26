@@ -45,7 +45,7 @@
 
 ### 1. Clone the repository
 ```sh
-git clone https://github.com/reinheimermat/coffee-delivery
+git clone https://github.com/reinheimermat/dt-money
 ```
 ### 2. install dependencies
 ```sh
